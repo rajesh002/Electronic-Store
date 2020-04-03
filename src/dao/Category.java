@@ -3,24 +3,28 @@ package dao;
 import java.util.ArrayList;
 
 public class Category {
-	ArrayList<String> Categories=new ArrayList<String>();
+	private ArrayList<String> Categories=new ArrayList<String>(); //List for adding Categories to store
 	public Category(){
 		Categories.add("Refrigerators");
 		Categories.add("Washing Machines");
 		Categories.add("Televisions");
 		Categories.add("Mobile Phones");
 		Categories.add("Air conditioners");
+		Categories.add("Laptops");
+		Categories.add("Digital Cameras");
+		
 	}
 	
-	
+	//Displaying the items on the console
 	public void displayCategory() {
 		for(int index1=0;index1<Categories.size();index1++) {
 	         System.out.println(index1+1+" "+Categories.get(index1));
 	      }
 	}
 	
-	
-	
+	public void addProduct(String newProduct) {
+		Categories.add(newProduct);
+	}
 	
 	
 }
